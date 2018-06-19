@@ -1,0 +1,47 @@
+<!-- Number Guessing Game HTML -->
+<html>
+<head>
+    <title>InMar's Number Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    <!-- TODO let the user submit a guess by pressing return -->
+    <!-- TODO hide and show history area as needed -->
+    <link rel="stylesheet" type="text/css" href="InMar.css">
+    <script type="text/javascript" src="InMar.js"></script>
+</head>
+<body onload=Start()>
+
+<div id="container">
+    <article class="form-style-1">
+        <header>
+            <h1><img src="https://www.inmar.com/wp-content/uploads/2015/11/inmar-logo-web-2x.png">Number Game</h1>
+            <section>
+               Think of a number between 0 and 100. Now the computer is going to guess it in 7 or less guesses.
+            </section>
+        </header>
+            <section>
+                <ul>
+                    <li>No. Guesses:</li>
+                    <li><input value=1 id=guesses size=5></li><!--number of guesses the computer has taken-->
+                    <li class="label">Computer Guess:</li>
+                    <li><input value=50 id=Guesser size=5></li><!--the computers guess-->
+                </ul>
+            </section>
+
+            <section class="label">
+                <div>
+                    <input class="button high" type=button value=Higher onclick=Guess(1)><!--//"Higher" button-->
+                </div>
+                <div>
+                    <input class="button low" type=button value=Lower onclick=Guess(2)><!--"Lower" button-->
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <input class="button start" type=button value="Start Again" onclick=Start()>	<!--"start again" button-->
+                </div>
+            </section>
+        </article>
+</div>
+</body>
+</html>
